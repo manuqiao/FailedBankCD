@@ -16,8 +16,6 @@
 		5389079F1966BFF6003694BE /* FBCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389079E1966BFF6003694BE /* FBCDAppDelegate.m */; };
 		538907A21966BFF6003694BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538907A01966BFF6003694BE /* Main.storyboard */; };
 		538907A51966BFF6003694BE /* FailedBankCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 538907A31966BFF6003694BE /* FailedBankCD.xcdatamodeld */; };
-		538907A81966BFF6003694BE /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907A71966BFF6003694BE /* FBCDMasterViewController.m */; };
-		538907AB1966BFF6003694BE /* FBCDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907AA1966BFF6003694BE /* FBCDDetailViewController.m */; };
 		538907AD1966BFF6003694BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538907AC1966BFF6003694BE /* Images.xcassets */; };
 		538907B41966BFF6003694BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538907B31966BFF6003694BE /* XCTest.framework */; };
 		538907B51966BFF6003694BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5389078C1966BFF6003694BE /* Foundation.framework */; };
@@ -25,6 +23,7 @@
 		538907B71966BFF6003694BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538907921966BFF6003694BE /* CoreData.framework */; };
 		538907BF1966BFF6003694BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538907BD1966BFF6003694BE /* InfoPlist.strings */; };
 		538907C11966BFF6003694BE /* FailedBankCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907C01966BFF6003694BE /* FailedBankCDTests.m */; };
+		538907CC1966C02F003694BE /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907CB1966C02F003694BE /* FBCDMasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +50,14 @@
 		5389079E1966BFF6003694BE /* FBCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDAppDelegate.m; sourceTree = "<group>"; };
 		538907A11966BFF6003694BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		538907A41966BFF6003694BE /* FailedBankCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FailedBankCD.xcdatamodel; sourceTree = "<group>"; };
-		538907A61966BFF6003694BE /* FBCDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
-		538907A71966BFF6003694BE /* FBCDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
-		538907A91966BFF6003694BE /* FBCDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCDDetailViewController.h; sourceTree = "<group>"; };
-		538907AA1966BFF6003694BE /* FBCDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDDetailViewController.m; sourceTree = "<group>"; };
 		538907AC1966BFF6003694BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		538907B21966BFF6003694BE /* FailedBankCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FailedBankCDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		538907B31966BFF6003694BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		538907BC1966BFF6003694BE /* FailedBankCDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FailedBankCDTests-Info.plist"; sourceTree = "<group>"; };
 		538907BE1966BFF6003694BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		538907C01966BFF6003694BE /* FailedBankCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBankCDTests.m; sourceTree = "<group>"; };
+		538907CA1966C02F003694BE /* FBCDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
+		538907CB1966C02F003694BE /* FBCDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +123,11 @@
 				5389079D1966BFF6003694BE /* FBCDAppDelegate.h */,
 				5389079E1966BFF6003694BE /* FBCDAppDelegate.m */,
 				538907A01966BFF6003694BE /* Main.storyboard */,
-				538907A61966BFF6003694BE /* FBCDMasterViewController.h */,
-				538907A71966BFF6003694BE /* FBCDMasterViewController.m */,
-				538907A91966BFF6003694BE /* FBCDDetailViewController.h */,
-				538907AA1966BFF6003694BE /* FBCDDetailViewController.m */,
 				538907AC1966BFF6003694BE /* Images.xcassets */,
 				538907A31966BFF6003694BE /* FailedBankCD.xcdatamodeld */,
 				538907951966BFF6003694BE /* Supporting Files */,
+				538907CA1966C02F003694BE /* FBCDMasterViewController.h */,
+				538907CB1966C02F003694BE /* FBCDMasterViewController.m */,
 			);
 			path = FailedBankCD;
 			sourceTree = "<group>";
@@ -265,10 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				538907A51966BFF6003694BE /* FailedBankCD.xcdatamodeld in Sources */,
-				538907AB1966BFF6003694BE /* FBCDDetailViewController.m in Sources */,
 				5389079B1966BFF6003694BE /* main.m in Sources */,
 				5389079F1966BFF6003694BE /* FBCDAppDelegate.m in Sources */,
-				538907A81966BFF6003694BE /* FBCDMasterViewController.m in Sources */,
+				538907CC1966C02F003694BE /* FBCDMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
