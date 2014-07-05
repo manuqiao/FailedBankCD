@@ -24,8 +24,8 @@
 		538907BF1966BFF6003694BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538907BD1966BFF6003694BE /* InfoPlist.strings */; };
 		538907C11966BFF6003694BE /* FailedBankCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907C01966BFF6003694BE /* FailedBankCDTests.m */; };
 		538907CC1966C02F003694BE /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907CB1966C02F003694BE /* FBCDMasterViewController.m */; };
-		538907CF1967F36B003694BE /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907CE1967F36B003694BE /* FailedBankInfo.m */; };
-		538907D21967F36C003694BE /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907D11967F36C003694BE /* FailedBankDetails.m */; };
+		538907D51967F734003694BE /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907D41967F734003694BE /* FailedBankDetails.m */; };
+		538907D81967F734003694BE /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 538907D71967F734003694BE /* FailedBankInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,10 @@
 		538907C01966BFF6003694BE /* FailedBankCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBankCDTests.m; sourceTree = "<group>"; };
 		538907CA1966C02F003694BE /* FBCDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
 		538907CB1966C02F003694BE /* FBCDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
-		538907CD1967F36B003694BE /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
-		538907CE1967F36B003694BE /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
-		538907D01967F36C003694BE /* FailedBankDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetails.h; sourceTree = "<group>"; };
-		538907D11967F36C003694BE /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
+		538907D31967F734003694BE /* FailedBankDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetails.h; sourceTree = "<group>"; };
+		538907D41967F734003694BE /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
+		538907D61967F734003694BE /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
+		538907D71967F734003694BE /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,11 +130,11 @@
 				5389079E1966BFF6003694BE /* FBCDAppDelegate.m */,
 				538907A01966BFF6003694BE /* Main.storyboard */,
 				538907AC1966BFF6003694BE /* Images.xcassets */,
+				538907D61967F734003694BE /* FailedBankInfo.h */,
+				538907D71967F734003694BE /* FailedBankInfo.m */,
+				538907D31967F734003694BE /* FailedBankDetails.h */,
+				538907D41967F734003694BE /* FailedBankDetails.m */,
 				538907A31966BFF6003694BE /* FailedBankCD.xcdatamodeld */,
-				538907D01967F36C003694BE /* FailedBankDetails.h */,
-				538907D11967F36C003694BE /* FailedBankDetails.m */,
-				538907CD1967F36B003694BE /* FailedBankInfo.h */,
-				538907CE1967F36B003694BE /* FailedBankInfo.m */,
 				538907951966BFF6003694BE /* Supporting Files */,
 				538907CA1966C02F003694BE /* FBCDMasterViewController.h */,
 				538907CB1966C02F003694BE /* FBCDMasterViewController.m */,
@@ -270,10 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				538907A51966BFF6003694BE /* FailedBankCD.xcdatamodeld in Sources */,
-				538907D21967F36C003694BE /* FailedBankDetails.m in Sources */,
+				538907D51967F734003694BE /* FailedBankDetails.m in Sources */,
 				5389079B1966BFF6003694BE /* main.m in Sources */,
-				538907CF1967F36B003694BE /* FailedBankInfo.m in Sources */,
 				5389079F1966BFF6003694BE /* FBCDAppDelegate.m in Sources */,
+				538907D81967F734003694BE /* FailedBankInfo.m in Sources */,
 				538907CC1966C02F003694BE /* FBCDMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
