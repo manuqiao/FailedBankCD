@@ -7,8 +7,9 @@
 //
 
 #import "FBCDAppDelegate.h"
-
 #import "FBCDMasterViewController.h"
+#import "FailedBankInfo.h"
+#import "FailedBankDetails.h"
 
 @implementation FBCDAppDelegate
 
@@ -22,6 +23,34 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     FBCDMasterViewController *controller = (FBCDMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
+    failedBankInfo.name = @"Test Bank";
+    failedBankInfo.city = @"TestVille";
+    failedBankInfo.state = @"TestLand";
+    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails" inManagedObjectContext:context];
+    failedBankDetails.closeDate = [NSDate date];
+    failedBankDetails.updateDate = [NSDate date];
+    failedBankDetails.zip = @12345;
+    failedBankDetails.info = failedBankInfo;
+    failedBankInfo.details = failedBankDetails;
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"cannot save: %@", [error localizedDescription]);
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (FailedBankInfo *info in fetchedObjects) {
+        NSLog(@"name:%@", info.name);
+        FailedBankDetails *details = info.details;
+        NSLog(@"zip:%@", details.zip);
+    }
+    
     return YES;
 }
 							
