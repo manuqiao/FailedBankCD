@@ -7,6 +7,7 @@
 //
 
 #import "FailedBankInfo.h"
+#import "FailedBankDetails.h"
 
 
 @implementation FailedBankInfo
