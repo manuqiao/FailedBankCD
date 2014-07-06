@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5313920A19692BFD003D0F78 /* CoreDataTutorial2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5313920919692BFD003D0F78 /* CoreDataTutorial2.sqlite */; };
+		5313920D19692C11003D0F78 /* CoreDataTutorial2.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 5313920B19692C11003D0F78 /* CoreDataTutorial2.sqlite-shm */; };
+		5313920E19692C11003D0F78 /* CoreDataTutorial2.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 5313920C19692C11003D0F78 /* CoreDataTutorial2.sqlite-wal */; };
 		5389078D1966BFF6003694BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5389078C1966BFF6003694BE /* Foundation.framework */; };
 		5389078F1966BFF6003694BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5389078E1966BFF6003694BE /* CoreGraphics.framework */; };
 		538907911966BFF6003694BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538907901966BFF6003694BE /* UIKit.framework */; };
@@ -14,7 +17,6 @@
 		538907991966BFF6003694BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538907971966BFF6003694BE /* InfoPlist.strings */; };
 		5389079B1966BFF6003694BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389079A1966BFF6003694BE /* main.m */; };
 		5389079F1966BFF6003694BE /* FBCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389079E1966BFF6003694BE /* FBCDAppDelegate.m */; };
-		538907A21966BFF6003694BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538907A01966BFF6003694BE /* Main.storyboard */; };
 		538907A51966BFF6003694BE /* FailedBankCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 538907A31966BFF6003694BE /* FailedBankCD.xcdatamodeld */; };
 		538907AD1966BFF6003694BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538907AC1966BFF6003694BE /* Images.xcassets */; };
 		538907B41966BFF6003694BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538907B31966BFF6003694BE /* XCTest.framework */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5313920919692BFD003D0F78 /* CoreDataTutorial2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataTutorial2.sqlite; sourceTree = "<group>"; };
+		5313920B19692C11003D0F78 /* CoreDataTutorial2.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreDataTutorial2.sqlite-shm"; sourceTree = "<group>"; };
+		5313920C19692C11003D0F78 /* CoreDataTutorial2.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreDataTutorial2.sqlite-wal"; sourceTree = "<group>"; };
 		538907891966BFF6003694BE /* FailedBankCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FailedBankCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5389078C1966BFF6003694BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5389078E1966BFF6003694BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +140,9 @@
 				538907D31967F734003694BE /* FailedBankDetails.h */,
 				538907D41967F734003694BE /* FailedBankDetails.m */,
 				538907A31966BFF6003694BE /* FailedBankCD.xcdatamodeld */,
+				5313920919692BFD003D0F78 /* CoreDataTutorial2.sqlite */,
+				5313920B19692C11003D0F78 /* CoreDataTutorial2.sqlite-shm */,
+				5313920C19692C11003D0F78 /* CoreDataTutorial2.sqlite-wal */,
 				538907951966BFF6003694BE /* Supporting Files */,
 				538907CA1966C02F003694BE /* FBCDMasterViewController.h */,
 				538907CB1966C02F003694BE /* FBCDMasterViewController.m */,
@@ -250,7 +258,9 @@
 			files = (
 				538907AD1966BFF6003694BE /* Images.xcassets in Resources */,
 				538907991966BFF6003694BE /* InfoPlist.strings in Resources */,
-				538907A21966BFF6003694BE /* Main.storyboard in Resources */,
+				5313920D19692C11003D0F78 /* CoreDataTutorial2.sqlite-shm in Resources */,
+				5313920E19692C11003D0F78 /* CoreDataTutorial2.sqlite-wal in Resources */,
+				5313920A19692BFD003D0F78 /* CoreDataTutorial2.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

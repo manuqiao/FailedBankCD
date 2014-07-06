@@ -24,32 +24,32 @@
     FBCDMasterViewController *controller = (FBCDMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
-    NSManagedObjectContext *context = [self managedObjectContext];
-    FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
-    failedBankInfo.name = @"Test Bank";
-    failedBankInfo.city = @"TestVille";
-    failedBankInfo.state = @"TestLand";
-    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails" inManagedObjectContext:context];
-    failedBankDetails.closeDate = [NSDate date];
-    failedBankDetails.updateDate = [NSDate date];
-    failedBankDetails.zip = @12345;
-    failedBankDetails.info = failedBankInfo;
-    failedBankInfo.details = failedBankDetails;
-    
-    NSError *error;
-    if (![context save:&error]) {
-        NSLog(@"cannot save: %@", [error localizedDescription]);
-    }
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    for (FailedBankInfo *info in fetchedObjects) {
-        NSLog(@"name:%@", info.name);
-        FailedBankDetails *details = info.details;
-        NSLog(@"zip:%@", details.zip);
-    }
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
+//    failedBankInfo.name = @"Test Bank";
+//    failedBankInfo.city = @"TestVille";
+//    failedBankInfo.state = @"TestLand";
+//    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails" inManagedObjectContext:context];
+//    failedBankDetails.closeDate = [NSDate date];
+//    failedBankDetails.updateDate = [NSDate date];
+//    failedBankDetails.zip = @12345;
+//    failedBankDetails.info = failedBankInfo;
+//    failedBankInfo.details = failedBankDetails;
+//    
+//    NSError *error;
+//    if (![context save:&error]) {
+//        NSLog(@"cannot save: %@", [error localizedDescription]);
+//    }
+//    
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:context];
+//    [fetchRequest setEntity:entity];
+//    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+//    for (FailedBankInfo *info in fetchedObjects) {
+//        NSLog(@"name:%@", info.name);
+//        FailedBankDetails *details = info.details;
+//        NSLog(@"zip:%@", details.zip);
+//    }
     
     return YES;
 }
@@ -135,6 +135,21 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"FailedBankCD.sqlite"];
+    NSURL *storeShmURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"FailedBankCD.sqlite-shm"];
+    NSURL *storeWalURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"FailedBankCD.sqlite-wal"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CoreDataTutorial2" ofType:@"sqlite"]];
+        NSError* err = nil;
+        NSURL *shmURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CoreDataTutorial2" ofType:@"sqlite-shm"]];
+        NSURL *walURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CoreDataTutorial2" ofType:@"sqlite-wal"]];
+        
+        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err] ||
+            ![[NSFileManager defaultManager] copyItemAtURL:shmURL toURL:storeShmURL error:&err] ||
+            ![[NSFileManager defaultManager] copyItemAtURL:walURL toURL:storeWalURL error:&err]) {
+            NSLog(@"Oops, could copy preloaded data");
+        }
+    }
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
